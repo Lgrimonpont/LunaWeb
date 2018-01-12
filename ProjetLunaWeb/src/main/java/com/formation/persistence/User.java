@@ -8,53 +8,53 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@Column(name = "name")
-	private String name;
+	@Column
+	private String login;
 
-	@Column(name = "email")
-	private String email;
+	@Column
+	private String pass;
 
-	@Column(name = "password")
-	private String password;
+	@Column
+	private String role;
 
 	public User() {
 	}
 
-	public User(String name, String email, String password) {
-		this.name = name;
-		this.email = email;
-		this.password = password;
+	public User(String login, String pass, String role) {
+		this.login = login;
+		this.pass = pass;
+		this.role = role;
 	}
 
-	public String getName() {
-		return name;
+	public String getLogin() {
+		return login;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getPass() {
+		return pass;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getRole() {
+		return role;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	public long getId() {
