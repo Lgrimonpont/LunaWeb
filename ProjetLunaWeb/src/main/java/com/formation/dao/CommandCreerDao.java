@@ -7,11 +7,11 @@ import com.formation.persistence.CommandCreer;
 public interface CommandCreerDao {
 	public void insertCommandCreer(CommandCreer commandCreer);
 
-	public void updateCommandCreer(CommandCreer commandcreer);
+	public void updateCommandCreer(CommandCreer commandCreer);
 
-	public void removeCommandCreer(int commandcreerID);
+	public void removeCommandCreer(int commandCreerID);
 
-	public CommandCreer getCommandCreer(int commandcreerID);
+	public CommandCreer getCommandCreer(int commandCreerID);
 
 	public List<CommandCreer> getAllCommandCreer();
 

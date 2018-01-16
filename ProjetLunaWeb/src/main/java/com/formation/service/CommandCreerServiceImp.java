@@ -26,22 +26,22 @@ public class CommandCreerServiceImp implements CommandCreerService{
 
 	@Transactional
 	@Override
-	public void updateCommandCreer(CommandCreer commandcreer) {
-		commandCreerDao.updateCommandCreer(commandcreer);
+	public void updateCommandCreer(CommandCreer commandCreer) {
+		commandCreerDao.updateCommandCreer(commandCreer);
 		
 	}
 
 	@Transactional
 	@Override
-	public void removeCommandCreer(int commandcreerID) {
-		commandCreerDao.removeCommandCreer(commandcreerID);
+	public void removeCommandCreer(int commandCreerID) {
+		commandCreerDao.removeCommandCreer(commandCreerID);
 		
 	}
 
 	@Transactional
 	@Override
-	public CommandCreer getCommandCreer(int commandcreerID) {
-		return commandCreerDao.getCommandCreer(commandcreerID);
+	public CommandCreer getCommandCreer(int commandCreerID) {
+		return commandCreerDao.getCommandCreer(commandCreerID);
 	}
 
 	@Transactional

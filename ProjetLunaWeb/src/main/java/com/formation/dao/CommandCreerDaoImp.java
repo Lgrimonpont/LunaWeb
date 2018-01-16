@@ -26,26 +26,26 @@ public class CommandCreerDaoImp implements CommandCreerDao {
 	}
 	
 	@Override
-	public CommandCreer getCommandCreer(int commandcreerID) {
+	public CommandCreer getCommandCreer(int commandCreerID) {
 		@SuppressWarnings("unchecked")
-		TypedQuery<CommandCreer> query = (TypedQuery<CommandCreer>) (sessionFactory.getCurrentSession()).createQuery("from Commandcreer where id ="+commandcreerID);
+		TypedQuery<CommandCreer> query = (TypedQuery<CommandCreer>) (sessionFactory.getCurrentSession()).createQuery("from Commandcreer where id ="+commandCreerID);
 		return query.getResultList().get(0);
 	}
 	
 	@Override
-	public void insertCommandCreer(CommandCreer commandcreer) {
-		sessionFactory.getCurrentSession().save(commandcreer);
+	public void insertCommandCreer(CommandCreer commandCreer) {
+		sessionFactory.getCurrentSession().save(commandCreer);
 	}
 	
 	@Override
-	public void removeCommandCreer(int commandcreerID) {
+	public void removeCommandCreer(int commandCreerID) {
 		@SuppressWarnings("unchecked")
-		TypedQuery<CommandCreer> query = (TypedQuery<CommandCreer>) (sessionFactory.getCurrentSession()).createQuery("delete from Commandcreer where id ="+commandcreerID);
+		TypedQuery<CommandCreer> query = (TypedQuery<CommandCreer>) (sessionFactory.getCurrentSession()).createQuery("delete from Commandcreer where id ="+commandCreerID);
 		query.executeUpdate();
 	}
 	
 	@Override
-	public void updateCommandCreer(CommandCreer commandcreer) {
+	public void updateCommandCreer(CommandCreer commandCreer) {
 		
 	}
 	}

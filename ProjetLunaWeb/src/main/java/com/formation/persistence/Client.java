@@ -28,7 +28,7 @@ public class Client {
 	private String nom;
 
 	@Column
-	private String addresse;
+	private String adresse;
 
 	@Column
 	private int codePostal;
@@ -49,13 +49,13 @@ public class Client {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Client(String dateCreation, String carteFidelite, String prenom, String nom, String addresse, int codePostal,
+	public Client(String dateCreation, String carteFidelite, String prenom, String nom, String adresse, int codePostal,
 			String fixe, String mobile, String email, String remarques) {
 		this.dateCreation = dateCreation;
 		this.carteFidelite = carteFidelite;
 		this.prenom = prenom;
 		this.nom = nom;
-		this.addresse = addresse;
+		this.adresse = adresse;
 		this.codePostal = codePostal;
 		this.fixe = fixe;
 		this.mobile = mobile;
@@ -95,12 +95,12 @@ public class Client {
 		this.nom = nom;
 	}
 
-	public String getAddresse() {
-		return addresse;
+	public String getAdresse() {
+		return adresse;
 	}
 
-	public void setAddresse(String addresse) {
-		this.addresse = addresse;
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
 	}
 
 	public int getCodePostal() {

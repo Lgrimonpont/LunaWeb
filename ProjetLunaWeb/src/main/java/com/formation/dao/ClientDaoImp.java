@@ -32,8 +32,8 @@ public class ClientDaoImp implements ClientDao {
 	}
 
 	@Override
-	public void insertClient(Client Client) {
-		sessionFactory.getCurrentSession().save(Client);
+	public void insertClient(Client client) {
+		sessionFactory.getCurrentSession().save(client);
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class ClientDaoImp implements ClientDao {
 	}
 
 	@Override
-	public void updateClient(Client Client) {
+	public void updateClient(Client client) {
 		
 	}
 
