@@ -49,6 +49,9 @@ public class CommandDaoImp implements CommandDao {
 	
 	@Override
 	public void updateCommand(Command command) {
-		
+		@SuppressWarnings("unchecked")
+		TypedQuery<Command> query = (TypedQuery<Command>) (sessionFactory.getCurrentSession())
+				.createQuery("UPDATE Command SET datecommand='"+command.getDatecommand()+"',idclient='"+command.getIdclient()+"',libelle='"+command.getLibelle()+"' WHERE id='"+command.getId()+"'");
+		query.executeUpdate();
 	}
 	}

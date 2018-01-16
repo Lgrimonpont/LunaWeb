@@ -46,6 +46,9 @@ public class CommandCreerDaoImp implements CommandCreerDao {
 	
 	@Override
 	public void updateCommandCreer(CommandCreer commandCreer) {
-		
+		@SuppressWarnings("unchecked")
+		TypedQuery<CommandCreer> query = (TypedQuery<CommandCreer>) (sessionFactory.getCurrentSession())
+				.createQuery("UPDATE CommandCreer SET idcommande='"+commandCreer.getIdcommand()+"',idArticle='"+commandCreer.getIdArticle()+"',quantite='"+commandCreer.getQuantite()+"' WHERE id='"+commandCreer.getId()+"'");
+		query.executeUpdate();
 	}
 	}
