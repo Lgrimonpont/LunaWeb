@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.formation.persistence.Article;
 
 @Repository
-public class ArticleDaoImp implements ArticleDAO {
+public class ArticleDaoImp implements ArticleDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;

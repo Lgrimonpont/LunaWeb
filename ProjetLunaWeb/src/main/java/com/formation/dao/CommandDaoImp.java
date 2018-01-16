@@ -13,7 +13,7 @@ import com.formation.persistence.Command;
 
 
 @Repository
-public class CommandDaoImp implements CommandDAO {
+public class CommandDaoImp implements CommandDao {
 	
 	@Autowired
 	private SessionFactory sessionFactory;

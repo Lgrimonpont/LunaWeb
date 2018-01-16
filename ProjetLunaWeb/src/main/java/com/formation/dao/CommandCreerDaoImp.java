@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.formation.persistence.CommandCreer;
 
 @Repository
-public class CommandCreerDaoImp implements CommandCreerDAO {
+public class CommandCreerDaoImp implements CommandCreerDao {
 	
 	@Autowired
 	private SessionFactory sessionFactory;

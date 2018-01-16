@@ -12,7 +12,7 @@ import com.formation.persistence.Client;
 
 
 @Repository
-public class ClientDaoImp implements ClientDAO {
+public class ClientDaoImp implements ClientDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
