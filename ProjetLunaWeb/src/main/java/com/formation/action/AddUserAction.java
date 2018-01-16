@@ -43,11 +43,9 @@ public class AddUserAction extends ActionSupport implements ModelDriven<User> {
 	}
 
 	public String execute() {
-		
-		if(userService.getUserConnection(user.getLogin(), user.getPass())==true)
-		{
-			setModels();
-		}
+		userService.updateUser(user);
+		setModels();
+
 		return SUCCESS;
 	}
 }

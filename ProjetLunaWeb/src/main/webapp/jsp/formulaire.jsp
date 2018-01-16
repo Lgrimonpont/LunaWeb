@@ -27,6 +27,7 @@
 </head>
 <body>
 	<s:form action="addUser">
+		<s:textfield key="global.name" name="id" />
 		<s:textfield key="global.name" name="login" />
 		<s:password key="global.password" name="pass" />
 		<s:textfield key="global.email" name="role" />

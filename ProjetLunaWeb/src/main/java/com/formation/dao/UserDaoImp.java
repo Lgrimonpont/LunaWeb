@@ -47,17 +47,21 @@ public class UserDaoImp implements UserDao {
 	}
 
 	@Override
-	public void updateUser(User User) {
-
+	public void updateUser(User user) {
+		@SuppressWarnings("unchecked")
+		TypedQuery<User> query = (TypedQuery<User>) (sessionFactory.getCurrentSession())
+				.createQuery("UPDATE User SET login='"+user.getLogin()+"',pass='"+user.getPass()+"',role='"+user.getRole()+"' WHERE id='"+user.getId()+"'");
+		query.executeUpdate();
 	}
 
 	@Override
 	public boolean getUserConnection(String user, String passwd) {
-		Boolean result=false;		
+		Boolean result = false;
 		@SuppressWarnings("unchecked")
-		TypedQuery<User> query = (TypedQuery<User>) sessionFactory.getCurrentSession().createQuery("from User where login='" + user + "' and pass='"+ passwd + "'");
+		TypedQuery<User> query = (TypedQuery<User>) sessionFactory.getCurrentSession()
+				.createQuery("from User where login='" + user + "' and pass='" + passwd + "'");
 		if (query.getResultList().isEmpty() == false) {
-			result=true;
+			result = true;
 		}
 		return result;
 	}
