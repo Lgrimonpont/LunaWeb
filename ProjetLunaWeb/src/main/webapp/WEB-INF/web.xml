@@ -23,7 +23,15 @@
 			<param-name>struts.custom.i18n.resources</param-name>
 			<param-value>global</param-value>
 		</init-param>
+		<init-param>
+			<param-name>struts.convention.default.parent.package</param-name>
+			<param-value>com.formation.action</param-value>
+		</init-param>
 	</filter>
+
+	<listener>
+		<listener-class>org.apache.tiles.extras.complete.CompleteAutoloadTilesListener</listener-class>
+	</listener>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
