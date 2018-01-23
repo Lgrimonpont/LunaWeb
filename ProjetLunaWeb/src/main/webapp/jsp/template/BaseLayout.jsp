@@ -3,22 +3,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title><tiles:insertAttribute name="title" ignore="true" /></title>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/BaseLayout.css"
+	type="text/css">
 </head>
 <body>
-	<table>
-		<tr>
-			<td height="30" colspan="2"><tiles:insertAttribute name="header" />
-			</td>
-		</tr>
-		<tr>
-			<td height="250"><tiles:insertAttribute name="menu" /></td>
-			<td height="350"><tiles:insertAttribute name="body" /></td>
-		</tr>
-		<tr>
-			<td height="30" colspan="2"><tiles:insertAttribute name="footer" />
-			</td>
-		</tr>
-	</table>
+	<tiles:insertAttribute name="header" />
+	<tiles:insertAttribute name="menu" />
+	<tiles:insertAttribute name="body" />
+	<tiles:insertAttribute name="footer" />
 </body>
 </html>

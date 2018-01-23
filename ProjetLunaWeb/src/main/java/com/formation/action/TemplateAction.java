@@ -14,16 +14,12 @@ public class TemplateAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@Action(value = "welcomeLink", results = { @Result(name = "welcome", type = "tiles", location = "welcome") })
+	@Action(value = "welcomeLink", results = { @Result(name = "welcome", type = "tiles", location = "baseLayout") })
 	public String welcome() {
 		return "welcome";
 	}
-	@Action(value = "friendsLink", results = { @Result(name = "friends", type = "tiles", location = "friends") })
+	@Action(value = "formsLink", results = { @Result(name = "forms", type = "tiles", location = "forms") })
 	public String friends() {
-		return "friends";
-	}
-	@Action(value = "officeLink", results = { @Result(name = "office", type = "tiles", location = "office") })
-	public String office() {
-		return "office";
+		return "forms";
 	}
 }

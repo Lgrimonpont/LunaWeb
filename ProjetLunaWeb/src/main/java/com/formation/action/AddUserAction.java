@@ -13,7 +13,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 @Namespace(value = "/")
-@Action(value = "addUser", results = { @Result(name = "success", location = "/jsp/formulaire.jsp") })
+@Action(value = "addUser", results = { @Result(name = "success",type = "tiles", location = "forms") })
 public class AddUserAction extends ActionSupport implements ModelDriven<User> {
 
 	@Autowired
