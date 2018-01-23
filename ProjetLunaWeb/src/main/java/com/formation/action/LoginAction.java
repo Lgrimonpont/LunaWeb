@@ -13,7 +13,7 @@ import com.opensymphony.xwork2.ModelDriven;
 
 @Namespace("/")
 @Action("login")
-@Results(value = { @Result(name = "success", location = "/jsp/accueil.jsp"),
+@Results(value = { @Result(name = "success", type="tiles",  location = "accueil"),
 		@Result(name = "error", location = "/jsp/authentification.jsp") })
 public class LoginAction extends ActionSupport implements ModelDriven<User> {
 

@@ -3,11 +3,13 @@ package com.formation.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.formation.dao.ArticleDao;
 import com.formation.persistence.Article;
 
+@Service
 public class ArticleServiceImp implements ArticleService {
 
 	@Autowired

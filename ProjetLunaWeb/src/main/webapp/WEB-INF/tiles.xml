@@ -16,5 +16,10 @@
 		<put-attribute name="title" value="Forms" />
 		<put-attribute name="body" value="/jsp/Formulaire.jsp" />
 	</definition>
+	
+	<definition name="accueil" extends="baseLayout">
+		<put-attribute name="title" value="Accueil" />
+		<put-attribute name="body" value="/jsp/Accueil.jsp" />
+	</definition>
  
 </tiles-definitions>

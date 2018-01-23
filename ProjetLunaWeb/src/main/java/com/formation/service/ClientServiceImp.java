@@ -3,11 +3,13 @@ package com.formation.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.formation.dao.ClientDao;
 import com.formation.persistence.Client;
 
+@Service
 public class ClientServiceImp implements ClientService {
 
 	@Autowired
