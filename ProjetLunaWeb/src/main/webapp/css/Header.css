@@ -1,0 +1,27 @@
+@CHARSET "ISO-8859-1";
+
+.banner {
+	padding: 0px;
+	margin:0px;
+	background-color: lightblue;
+	height: 120px;
+	width: auto;
+}
+
+.logo {
+	float: left;
+	left: 10;
+	top: 10;
+	width:100px;
+	height: 100px;
+	background-size: cover;
+}
+
+h1 {
+	float: center;
+	color: white;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+}
+

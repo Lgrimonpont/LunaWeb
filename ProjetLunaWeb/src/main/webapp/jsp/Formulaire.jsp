@@ -22,7 +22,7 @@
 					<td width="20%">pass</td>
 					<td width="20%">role</td>
 				</tr>
-
+				
 				<s:iterator value="getModels()" status="modelsStatus">
 					<tr
 						class="<s:if test="#modelsStatus.odd == true ">odd</s:if><s:else>even</s:else>">
