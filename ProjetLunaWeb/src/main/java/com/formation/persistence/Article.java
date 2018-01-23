@@ -40,6 +40,10 @@ public class Article {
 		this.prixUnitaire = prixUnitaire;
 	}
 
+	public Article() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getId() {
 		return id;
 	}
