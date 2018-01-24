@@ -1,7 +1,10 @@
 package com.formation.action;
 
+import java.util.List;
 
 import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.Namespace;
+import org.apache.struts2.convention.annotation.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.formation.persistence.Client;
@@ -9,47 +12,57 @@ import com.formation.service.ClientService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-
+@Namespace(value = "/")
 public class ClientAction extends ActionSupport implements ModelDriven<Client> {
-	
+
 	@Autowired
 	private ClientService clientService;
-	
+
 	private static final long serialVersionUID = 1L;
 
 	private Client client = new Client();
-	
-	@Action(value = "removeClient")
-	public Client removeClient(int clientID) {
-		clientService.removeClient(clientID);
-		return null;
-	}
-	
-	@Action(value = "insertClient")
-	public Client insertClient(String prenom, String nom, String adresse, int codePostal, int fixe, int mobile, String email, String remarques) {
-		clientService.insertClient(client);
-		return null;
-	}
-	
-	@Action(value = "updateClient")
-	public Client updateClient(String prenom, String nom, String adresse, int codePostal, int fixe, int mobile, String email, String remarques) {
-		clientService.updateClient(client);
-		return null;
-	}
-	
-//	@Action(value = "getClient")
-//	public Client getClient(clientID) {
-//		clientService.getClient(clientID);
-//		return null;
-//	}
-//	public Client getAllClient() {
-//		clientService.getAllClient();
-//		return null;
-//	}
+	private List<Client> listClient = null;
+	private long idClient;
 
 	@Override
 	public Client getModel() {
 		return client;
+	}
+
+	public void setListClient() {
+		listClient = clientService.getAllClient();
+	}
+
+	public List<Client> getListClient() {
+		return listClient;
+	}
+
+	@Action(value = "afficheClient", results = { @Result(name = "client", type = "tiles", location = "client") })
+	public String afficheClient() {
+		setListClient();
+		return "client";
+	}
+	
+	@Action(value = "supprimerClient", results = { @Result(name = "supprimer", type = "tiles", location = "client") })
+	public String supprimer() {
+		System.out.println(idClient);
+		clientService.removeClient(idClient);
+		setListClient();
+		return "supprimer";
+	}
+	
+	/*@Action(value = "modifierClient", results = { @Result(name = "modifier", type = "tiles", location = "modifier") })
+	public String modifier() {
+		setListClient();
+		return "modifier";
+	}*/
+
+	public long getIdClient() {
+		return idClient;
+	}
+
+	public void setIdClient(long idClient) {
+		this.idClient = idClient;
 	}
 
 }

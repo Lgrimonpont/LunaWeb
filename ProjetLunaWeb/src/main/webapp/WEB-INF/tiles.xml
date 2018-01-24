@@ -26,5 +26,10 @@
 		<put-attribute name="title" value="Accueil" />
 		<put-attribute name="body" value="/jsp/Accueil.jsp" />
 	</definition>
+	
+		<definition name="client" extends="baseLayout">
+		<put-attribute name="title" value="Client" />
+		<put-attribute name="body" value="/jsp/Client.jsp" />
+	</definition>
 
 </tiles-definitions>
