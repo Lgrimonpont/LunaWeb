@@ -10,8 +10,8 @@
 <body>
 	<div class="vertical-menu">
 		<s:a action="ajouterClientLink">Ajouter</s:a>
-		<s:a action="accueilLink">Accueil</s:a>
 		<s:a action="chercherClientLink">Rechercher</s:a>
+		<s:a action="afficheClient">Retour</s:a>
 	</div>
 	<div class="bodyJsp">
 		<s:if test="getAjouter_modifier()==true">

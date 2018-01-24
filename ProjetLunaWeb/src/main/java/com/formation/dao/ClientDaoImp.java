@@ -46,7 +46,7 @@ public class ClientDaoImp implements ClientDao {
 	public void updateClient(Client client) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<Client> query = (TypedQuery<Client>) (sessionFactory.getCurrentSession())
-				.createQuery("UPDATE Client SET adresse='"+client.getAdresse()+"',cartedefidelite='"+client.getCarteFidelite()+"',codePostal='"+client.getCodePostal()+"',dateCreation='"+client.getDateCreation()+"',email='"+client.getEmail()+"',fixe='"+client.getFixe()+"',mobile ='"+client.getMobile()+"',nom='"+client.getNom()+"',prenom='"+client.getPrenom()+"',remarques='"+client.getRemarques()+"' WHERE id='"+client.getId()+"'");
+				.createQuery("UPDATE Client SET adresse='"+client.getAdresse()+"',cartefidelite='"+client.getCarteFidelite()+"',codePostal='"+client.getCodePostal()+"',dateCreation='"+client.getDateCreation()+"',email='"+client.getEmail()+"',fixe='"+client.getFixe()+"',mobile ='"+client.getMobile()+"',nom='"+client.getNom()+"',prenom='"+client.getPrenom()+"',remarques='"+client.getRemarques()+"' WHERE id='"+client.getId()+"'");
 		query.executeUpdate();
 	}
 
