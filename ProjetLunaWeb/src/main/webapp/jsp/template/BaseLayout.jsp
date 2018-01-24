@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="<s:url value='/css/BaseLayout.css' />">
+<link rel="icon" type="image/png" href="./images/Moon-32.png" />
 </head>
 <body>
 	<tiles:insertAttribute name="header" />
