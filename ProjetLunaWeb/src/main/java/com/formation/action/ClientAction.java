@@ -1,5 +1,6 @@
 package com.formation.action;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.struts2.convention.annotation.Action;
@@ -69,16 +70,36 @@ public class ClientAction extends ActionSupport implements ModelDriven<Client> {
 	}
 	
 	@Action(value = "ajouterClientLink", results = { @Result(name = "ajouterLink", type = "tiles", location = "ajouterClient") })
-	public String ajouteClientLink() {
+	public String ajouterClientLink() {
 		ajouter_modifier=true;
 		setListClient();
 		return "ajouterLink";
 	}
+	
 	@Action(value = "ajouterClient", results = { @Result(name = "ajouter", type = "tiles", location = "client") })
-	public String ajouteClient() {
+	public String ajouterClient() {
 		clientService.insertClient(client);
 		setListClient();
 		return "ajouter";
+	}
+	
+	@Action(value = "chercherClientLink", results = { @Result(name = "chercherLink", type = "tiles", location = "chercherClient") })
+	public String chercherClientLink() {
+		return "chercherLink";
+	}
+	
+	@Action(value = "chercherClient", results = { @Result(name = "chercher", type = "tiles", location = "chercherClient") })
+	public String chercherClient() {
+		List<Client> listClientTemp=new ArrayList<Client>();
+		setListClient();
+		for (int i = 0; i < listClient.size(); i++) {
+			if(listClient.get(i).getPrenom().equals(client.getPrenom()) || listClient.get(i).getNom().equals(client.getNom()))
+			{
+				listClientTemp.add(listClient.get(i));				
+			}
+		}
+		listClient=listClientTemp;
+		return "chercher";
 	}
 
 	public long getIdClient() {

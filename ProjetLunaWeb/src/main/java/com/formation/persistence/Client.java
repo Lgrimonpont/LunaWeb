@@ -19,7 +19,7 @@ public class Client {
 	private String dateCreation;
 
 	@Column
-	private String carteFidelite;;
+	private String carteFidelite;
 
 	@Column
 	private String prenom;
@@ -145,6 +145,10 @@ public class Client {
 
 	public long getId() {
 		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 }

@@ -17,11 +17,6 @@
 		<put-attribute name="body" value="/jsp/Authentification.jsp" />
 	</definition>
 
-	<definition name="forms" extends="baseLayout">
-		<put-attribute name="title" value="Forms" />
-		<put-attribute name="body" value="/jsp/Formulaire.jsp" />
-	</definition>
-
 	<definition name="accueil" extends="baseLayout">
 		<put-attribute name="title" value="Accueil" />
 		<put-attribute name="body" value="/jsp/Accueil.jsp" />
@@ -35,6 +30,11 @@
 	<definition name="ajouterClient" extends="baseLayout">
 		<put-attribute name="title" value="AjouterClient" />
 		<put-attribute name="body" value="/jsp/AjouterClient.jsp" />
+	</definition>
+	
+	<definition name="chercherClient" extends="baseLayout">
+		<put-attribute name="title" value="ChercherClient" />
+		<put-attribute name="body" value="/jsp/ChercherClient.jsp" />
 	</definition>
 
 	<definition name="article" extends="baseLayout">

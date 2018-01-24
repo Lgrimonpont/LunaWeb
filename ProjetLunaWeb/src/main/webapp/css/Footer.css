@@ -1,6 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 .footer{
+	position: fixed;
     text-align: center;
     vertical-align:middle;
     bottom: 0;

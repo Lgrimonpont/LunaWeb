@@ -4,7 +4,6 @@
 <div class="menu">
 	<ul>
 		<li><s:a action="accueilLink">Accueil</s:a></li>
-		<li><s:a action="formsLink">Formulaire</s:a></li>
 		<li><s:a action="afficheClient">Client</s:a></li>
 		<li><s:a action="afficheArticle">Article</s:a></li>
 		<li><s:a action="afficheCommande">Commande</s:a></li>

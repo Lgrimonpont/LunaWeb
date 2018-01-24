@@ -18,10 +18,7 @@ public class TemplateAction extends ActionSupport {
 	public String welcome() {
 		return "welcome";
 	}
-	@Action(value = "formsLink", results = { @Result(name = "forms", type = "tiles", location = "forms") })
-	public String forms() {
-		return "forms";
-	}
+
 	@Action(value = "accueilLink", results = { @Result(name = "accueil", type = "tiles", location = "accueil") })
 	public String accueil() {
 		return "accueil";

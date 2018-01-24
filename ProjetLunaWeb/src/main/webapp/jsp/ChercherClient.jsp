@@ -8,14 +8,17 @@
 <link rel="stylesheet" href="<s:url value='/css/Body.css' />">
 </head>
 <body>
-
 	<div class="vertical-menu">
 		<s:a action="ajouterClientLink">Ajouter</s:a>
 		<s:a action="accueilLink">Accueil</s:a>
 		<s:a action="chercherClientLink">Rechercher</s:a>
 	</div>
-
 	<div class="bodyJsp">
+		<s:form action="chercherClient">
+			<s:textfield label="Nom" name="nom" />
+			<s:textfield label="Prénom" name="prenom" />
+			<s:submit value="Rechercher" name="submit" />
+		</s:form>
 		<s:if test="getListClient()!=null">
 			<table>
 				<tr>
@@ -68,9 +71,5 @@
 			</table>
 		</s:if>
 	</div>
-
-	<a href="<s:url action="accueilLink"/>">Retour</a>
-	<br>
-
 </body>
 </html>
