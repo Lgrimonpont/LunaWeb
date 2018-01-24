@@ -8,9 +8,9 @@ public interface ArticleDao {
 
 	public void updateArticle(Article article);
 
-	public void removeArticle(int articleID);
+	public void removeArticle(long articleID);
 
-	public Article getArticle(int articleID);
+	public Article getArticle(long articleID);
 
 	public List<Article> getAllArticle();
 }

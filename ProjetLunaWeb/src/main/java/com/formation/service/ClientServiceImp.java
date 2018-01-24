@@ -29,13 +29,13 @@ public class ClientServiceImp implements ClientService {
 
 	@Transactional
 	@Override
-	public void removeClient(int clientID) {
+	public void removeClient(long clientID) {
 		clientDao.removeClient(clientID);
 	}
 
 	@Transactional
 	@Override
-	public Client getClient(int clientID) {
+	public Client getClient(long clientID) {
 		return clientDao.getClient(clientID);
 	}
 

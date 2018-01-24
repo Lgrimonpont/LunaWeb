@@ -9,9 +9,9 @@ public interface ClientDao {
 
 	public void updateClient(Client client);
 
-	public void removeClient(int clientID);
+	public void removeClient(long clientID);
 
-	public Client getClient(int clientID);
+	public Client getClient(long clientID);
 
 	public List<Client> getAllClient();
 }

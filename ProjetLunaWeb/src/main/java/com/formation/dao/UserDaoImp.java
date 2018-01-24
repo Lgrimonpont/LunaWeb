@@ -24,7 +24,7 @@ public class UserDaoImp implements UserDao {
 	}
 
 	@Override
-	public User getUser(int userID) {
+	public User getUser(long userID) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<User> query = (TypedQuery<User>) (sessionFactory.getCurrentSession())
 				.createQuery("from User where id=" + userID);
@@ -37,7 +37,7 @@ public class UserDaoImp implements UserDao {
 	}
 
 	@Override
-	public void removeUser(int userID) {
+	public void removeUser(long userID) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<User> query = (TypedQuery<User>) (sessionFactory.getCurrentSession())
 				.createQuery("delete from User where id=" + userID);

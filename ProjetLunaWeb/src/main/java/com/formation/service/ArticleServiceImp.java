@@ -29,13 +29,13 @@ public class ArticleServiceImp implements ArticleService {
 
 	@Transactional
 	@Override
-	public void removeArticle(int articleID) {
+	public void removeArticle(long articleID) {
 		articleDao.removeArticle(articleID);
 	}
 
 	@Transactional
 	@Override
-	public Article getArticle(int articleID) {
+	public Article getArticle(long articleID) {
 		return articleDao.getArticle(articleID);
 	}
 

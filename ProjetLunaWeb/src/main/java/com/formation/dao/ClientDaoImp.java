@@ -24,7 +24,7 @@ public class ClientDaoImp implements ClientDao {
 	}
 
 	@Override
-	public Client getClient(int clientID) {
+	public Client getClient(long clientID) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<Client> query = (TypedQuery<Client>) (sessionFactory.getCurrentSession()).createQuery("from Client where id="+clientID);
 		return query.getResultList().get(0);
@@ -36,7 +36,7 @@ public class ClientDaoImp implements ClientDao {
 	}
 
 	@Override
-	public void removeClient(int clientID) {
+	public void removeClient(long clientID) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<Client> query = (TypedQuery<Client>) (sessionFactory.getCurrentSession()).createQuery("delete from Client where id="+clientID);
         query.executeUpdate();

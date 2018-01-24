@@ -26,7 +26,7 @@ public class CommandeCreerDaoImp implements CommandeCreerDao {
 	}
 	
 	@Override
-	public CommandeCreer getCommandeCreer(int commandeCreerID) {
+	public CommandeCreer getCommandeCreer(long commandeCreerID) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<CommandeCreer> query = (TypedQuery<CommandeCreer>) (sessionFactory.getCurrentSession()).createQuery("from Commandecreer where id ="+commandeCreerID);
 		return query.getResultList().get(0);
@@ -38,7 +38,7 @@ public class CommandeCreerDaoImp implements CommandeCreerDao {
 	}
 	
 	@Override
-	public void removeCommandeCreer(int commandeCreerID) {
+	public void removeCommandeCreer(long commandeCreerID) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<CommandeCreer> query = (TypedQuery<CommandeCreer>) (sessionFactory.getCurrentSession()).createQuery("delete from Commandecreer where id ="+commandeCreerID);
 		query.executeUpdate();

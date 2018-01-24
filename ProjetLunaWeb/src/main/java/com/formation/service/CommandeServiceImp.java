@@ -32,14 +32,14 @@ public class CommandeServiceImp implements CommandeService {
 
 	@Transactional
 	@Override
-	public void removeCommande(int commandeId) {
+	public void removeCommande(long commandeId) {
 		commandeDao.removeCommande(commandeId);
 		
 	}
 
 	@Transactional
 	@Override
-	public Commande getCommande(int commandeId) {
+	public Commande getCommande(long commandeId) {
 		return commandeDao.getCommande(commandeId);
 	}
 

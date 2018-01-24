@@ -33,14 +33,14 @@ public class CommandeCreerServiceImp implements CommandeCreerService{
 
 	@Transactional
 	@Override
-	public void removeCommandeCreer(int commandeCreerID) {
+	public void removeCommandeCreer(long commandeCreerID) {
 		commandeCreerDao.removeCommandeCreer(commandeCreerID);
 		
 	}
 
 	@Transactional
 	@Override
-	public CommandeCreer getCommandeCreer(int commandeCreerID) {
+	public CommandeCreer getCommandeCreer(long commandeCreerID) {
 		return commandeCreerDao.getCommandeCreer(commandeCreerID);
 	}
 

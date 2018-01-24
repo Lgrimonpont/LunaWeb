@@ -9,9 +9,9 @@ public interface CommandeDao {
 
 	public void updateCommande(Commande commande);
 
-	public void removeCommande(int commandeId);
+	public void removeCommande(long commandeId);
 
-	public Commande getCommande(int commandeId);
+	public Commande getCommande(long commandeId);
 
 	public List<Commande> getAllCommande();
 }

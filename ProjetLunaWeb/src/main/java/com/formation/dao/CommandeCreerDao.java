@@ -9,9 +9,9 @@ public interface CommandeCreerDao {
 
 	public void updateCommandeCreer(CommandeCreer commandeCreer);
 
-	public void removeCommandeCreer(int commandeCreerID);
+	public void removeCommandeCreer(long commandeCreerID);
 
-	public CommandeCreer getCommandeCreer(int commandeCreerID);
+	public CommandeCreer getCommandeCreer(long commandeCreerID);
 
 	public List<CommandeCreer> getAllCommandeCreer();
 

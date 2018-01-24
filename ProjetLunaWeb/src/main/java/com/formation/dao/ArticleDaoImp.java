@@ -24,7 +24,7 @@ public class ArticleDaoImp implements ArticleDao {
 	}
 
 	@Override
-	public Article getArticle(int articleID) {
+	public Article getArticle(long articleID) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<Article> query = (TypedQuery<Article>) (sessionFactory.getCurrentSession()).createQuery("from Article where id="+articleID);
 		return query.getResultList().get(0);
@@ -36,7 +36,7 @@ public class ArticleDaoImp implements ArticleDao {
 	}
 
 	@Override
-	public void removeArticle(int articleID) {
+	public void removeArticle(long articleID) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<Article> query = (TypedQuery<Article>) (sessionFactory.getCurrentSession()).createQuery("delete from Article where id="+articleID);
         query.executeUpdate();

@@ -9,9 +9,9 @@ public interface UserService {
 
 	public void updateUser(User user);
 
-	public void removeUser(int userID);
+	public void removeUser(long userID);
 
-	public User getUser(int userID);
+	public User getUser(long userID);
 
 	public boolean getUserConnection(String user, String passwd);
 
