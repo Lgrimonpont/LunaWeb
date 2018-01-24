@@ -26,10 +26,15 @@
 		<put-attribute name="title" value="Accueil" />
 		<put-attribute name="body" value="/jsp/Accueil.jsp" />
 	</definition>
-	
-		<definition name="client" extends="baseLayout">
+
+	<definition name="client" extends="baseLayout">
 		<put-attribute name="title" value="Client" />
 		<put-attribute name="body" value="/jsp/Client.jsp" />
+	</definition>
+	
+	<definition name="ajouterClient" extends="baseLayout">
+		<put-attribute name="title" value="AjouterClient" />
+		<put-attribute name="body" value="/jsp/AjouterClient.jsp" />
 	</definition>
 
 </tiles-definitions>

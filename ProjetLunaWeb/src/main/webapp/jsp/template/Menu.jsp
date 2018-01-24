@@ -3,7 +3,8 @@
 <link rel="stylesheet" href="<s:url value='/css/Menu.css' />">
 <div class="menu">
 	<ul>
-		<li><a href="<s:url action="accueilLink"/>">Accueil</a></li>
-		<li><a href="<s:url action="formsLink"/>">Formulaire</a></li>
+		<li><s:a action="accueilLink">Accueil</s:a></li>
+		<li><s:a action="formsLink">Formulaire</s:a></li>
+		<li><s:a action="afficheClient">Client</s:a></li>
 	</ul>
 </div>

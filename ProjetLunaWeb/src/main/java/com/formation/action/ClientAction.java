@@ -23,6 +23,7 @@ public class ClientAction extends ActionSupport implements ModelDriven<Client> {
 	private Client client = new Client();
 	private List<Client> listClient = null;
 	private long idClient;
+	private Boolean ajouter_modifier=false;
 
 	@Override
 	public Client getModel() {
@@ -51,11 +52,34 @@ public class ClientAction extends ActionSupport implements ModelDriven<Client> {
 		return "supprimer";
 	}
 	
-	/*@Action(value = "modifierClient", results = { @Result(name = "modifier", type = "tiles", location = "modifier") })
-	public String modifier() {
+	@Action(value = "modifierClientLink", results = { @Result(name = "modifierLink", type = "tiles", location = "ajouterClient") })
+	public String modifierClientLink() {
+		ajouter_modifier=false;
+		client=clientService.getClient(idClient);
+		setListClient();
+		return "modifierLink";
+	}
+
+	@Action(value = "modifierClient", results = { @Result(name = "modifier", type = "tiles", location = "client") })
+	public String modifierClient() {
+		System.out.println(client.getCarteFidelite());
+		clientService.updateClient(client);		
 		setListClient();
 		return "modifier";
-	}*/
+	}
+	
+	@Action(value = "ajouterClientLink", results = { @Result(name = "ajouterLink", type = "tiles", location = "ajouterClient") })
+	public String ajouteClientLink() {
+		ajouter_modifier=true;
+		setListClient();
+		return "ajouterLink";
+	}
+	@Action(value = "ajouterClient", results = { @Result(name = "ajouter", type = "tiles", location = "client") })
+	public String ajouteClient() {
+		clientService.insertClient(client);
+		setListClient();
+		return "ajouter";
+	}
 
 	public long getIdClient() {
 		return idClient;
@@ -65,4 +89,15 @@ public class ClientAction extends ActionSupport implements ModelDriven<Client> {
 		this.idClient = idClient;
 	}
 
+	public Boolean getAjouter_modifier() {
+		return ajouter_modifier;
+	}
+	
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
+	}
 }
