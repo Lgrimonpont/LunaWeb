@@ -3,7 +3,6 @@ package com.formation.action;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.Result;
-import org.apache.struts2.convention.annotation.Results;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.formation.persistence.User;
@@ -12,9 +11,8 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 @Namespace("/")
-@Action("login")
-@Results(value = { @Result(name = "success", type="tiles",  location = "accueil"),
-		@Result(name = "error", location = "/jsp/authentification.jsp") })
+@Action(value = "login", results= { @Result(name = "success", type="tiles",  location = "accueil"),
+		@Result(name = "error", type="tiles", location = "login") })
 public class LoginAction extends ActionSupport implements ModelDriven<User> {
 
 	/**

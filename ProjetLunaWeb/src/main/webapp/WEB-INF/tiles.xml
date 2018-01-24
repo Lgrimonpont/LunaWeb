@@ -12,14 +12,19 @@
 		<put-attribute name="footer" value="/jsp/template/Footer.jsp" />
 	</definition>
 
+	<definition name="login" extends="baseLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/jsp/Authentification.jsp" />
+	</definition>
+
 	<definition name="forms" extends="baseLayout">
 		<put-attribute name="title" value="Forms" />
 		<put-attribute name="body" value="/jsp/Formulaire.jsp" />
 	</definition>
-	
+
 	<definition name="accueil" extends="baseLayout">
 		<put-attribute name="title" value="Accueil" />
 		<put-attribute name="body" value="/jsp/Accueil.jsp" />
 	</definition>
- 
+
 </tiles-definitions>
