@@ -46,7 +46,7 @@ public class ArticleDaoImp implements ArticleDao {
 	public void updateArticle(Article article) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<Article> query = (TypedQuery<Article>) (sessionFactory.getCurrentSession())
-				.createQuery("UPDATE Article SET Categorie='"+article.getCategorie()+"',codeCategorie='"+article.getCodeCategorie()+"',designation='"+article.getDesignation()+"', prixUnitaire='"+article.getPrixUnitaire()+"',quantitestock='"+article.getQuantitestock()+"' WHERE id='"+article.getId()+"'");
+				.createQuery("UPDATE Article SET Categorie='"+article.getCategorie()+"',codeCategorie='"+article.getCodeCategorie()+"',Designation='"+article.getDesignation()+"', prixUnitaire='"+article.getPrixUnitaire()+"',quantitestock='"+article.getQuantitestock()+"' WHERE id='"+article.getId()+"'");
 		query.executeUpdate();
 	}
 

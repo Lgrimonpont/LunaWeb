@@ -13,19 +13,19 @@ public class Commande {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private long id;
 	
 	@Column
 	private String libelle;
 	
 	@Column
-	private int idclient;
+	private long idclient;
 	
 	@Column
 	private String datecommande;
 
 	
-	public Commande(String libelle, int idclient, String datecommande) {
+	public Commande(String libelle, long idclient, String datecommande) {
 		this.libelle = libelle;
 		this.idclient = idclient;
 		this.datecommande = datecommande;
@@ -36,11 +36,11 @@ public class Commande {
 	}
 
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -52,11 +52,11 @@ public class Commande {
 		this.libelle = libelle;
 	}
 
-	public int getIdclient() {
+	public long getIdclient() {
 		return idclient;
 	}
 
-	public void setIdclient(int idclient) {
+	public void setIdclient(long idclient) {
 		this.idclient = idclient;
 	}
 

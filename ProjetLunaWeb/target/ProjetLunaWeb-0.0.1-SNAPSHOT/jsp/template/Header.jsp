@@ -1,8 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<link rel="stylesheet"
-	href="./css/Header.css"
-	type="text/css">
+<link rel="stylesheet" href="<s:url value='/css/Header.css' />">
 <div class="banner">
 	<div class="logo">
 		<s:a action="accueilLink">

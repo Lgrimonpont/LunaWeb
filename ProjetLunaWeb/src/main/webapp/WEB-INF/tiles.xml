@@ -4,47 +4,83 @@
         "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
 <tiles-definitions>
 
-	<definition name="baseLayout" template="/jsp/template/BaseLayout.jsp">
+	<definition name="baseLayout" template="/WEB-INF/jsp/template/BaseLayout.jsp">
 		<put-attribute name="title" value="Template" />
-		<put-attribute name="header" value="/jsp/template/Header.jsp" />
-		<put-attribute name="menu" value="/jsp/template/Menu.jsp" />
-		<put-attribute name="body" value="/jsp/template/Body.jsp" />
-		<put-attribute name="footer" value="/jsp/template/Footer.jsp" />
+		<put-attribute name="header" value="/WEB-INF/jsp/template/Header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/template/Menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/template/Body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/template/Footer.jsp" />
 	</definition>
 
 	<definition name="login" extends="baseLayout">
 		<put-attribute name="title" value="Login" />
-		<put-attribute name="body" value="/jsp/Authentification.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Authentification.jsp" />
 	</definition>
 
 	<definition name="accueil" extends="baseLayout">
 		<put-attribute name="title" value="Accueil" />
-		<put-attribute name="body" value="/jsp/Accueil.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Accueil.jsp" />
 	</definition>
 
 	<definition name="client" extends="baseLayout">
 		<put-attribute name="title" value="Client" />
-		<put-attribute name="body" value="/jsp/Client.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Client.jsp" />
 	</definition>
 
 	<definition name="ajouterClient" extends="baseLayout">
 		<put-attribute name="title" value="AjouterClient" />
-		<put-attribute name="body" value="/jsp/AjouterClient.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/AjouterClient.jsp" />
 	</definition>
-	
+
 	<definition name="chercherClient" extends="baseLayout">
 		<put-attribute name="title" value="ChercherClient" />
-		<put-attribute name="body" value="/jsp/ChercherClient.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/ChercherClient.jsp" />
 	</definition>
 
 	<definition name="article" extends="baseLayout">
 		<put-attribute name="title" value="Article" />
-		<put-attribute name="body" value="/jsp/Article.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Article.jsp" />
+	</definition>
+
+	<definition name="ajouterArticle" extends="baseLayout">
+		<put-attribute name="title" value="AjouterArticle" />
+		<put-attribute name="body" value="/WEB-INF/jsp/AjouterArticle.jsp" />
+	</definition>
+
+	<definition name="chercherArticle" extends="baseLayout">
+		<put-attribute name="title" value="ChercherArticle" />
+		<put-attribute name="body" value="/WEB-INF/jsp/ChercherArticle.jsp" />
 	</definition>
 
 	<definition name="commande" extends="baseLayout">
 		<put-attribute name="title" value="Commande" />
-		<put-attribute name="body" value="/jsp/Commande.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Commande.jsp" />
 	</definition>
+
+	<definition name="ajouterCommande" extends="baseLayout">
+		<put-attribute name="title" value="AjouterCommande" />
+		<put-attribute name="body" value="/WEB-INF/jsp/AjouterCommande.jsp" />
+	</definition>
+
+	<definition name="chercherCommande" extends="baseLayout">
+		<put-attribute name="title" value="ChercherCommande" />
+		<put-attribute name="body" value="/WEB-INF/jsp/ChercherCommande.jsp" />
+	</definition>
+
+	<definition name="commandeCreer" extends="baseLayout">
+		<put-attribute name="title" value="CommandeCreer" />
+		<put-attribute name="body" value="/WEB-INF/jsp/CommandeCreer.jsp" />
+	</definition>
+
+	<definition name="ajouterCommandeCreer" extends="baseLayout">
+		<put-attribute name="title" value="AjouterCommandeCreer" />
+		<put-attribute name="body" value="/WEB-INF/jsp/AjouterCommandeCreer.jsp" />
+	</definition>
+	
+	<definition name="chercherCommandeCreer" extends="baseLayout">
+		<put-attribute name="title" value="ChercherCommandeCreer" />
+		<put-attribute name="body" value="/WEB-INF/jsp/ChercherCommandeCreer.jsp" />
+	</definition>
+
 
 </tiles-definitions>

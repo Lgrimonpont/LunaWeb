@@ -6,9 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="<s:url value='/css/Body.css' />">
+<meta name="viewport" content="width=device-width" />
 </head>
 <body>
-	<h1>Page Article</h1>
+	<div class="vertical-menu">
+		<s:a action="ajouterArticleLink" class="a1">Ajouter</s:a>
+		<s:a action="chercherArticleLink" class="a1">Rechercher</s:a>
+		<s:a action="accueilLink" class="a1">Accueil</s:a>
+	</div>
 	<div class="bodyJsp">
 		<s:if test="getListArticle()!=null">
 			<table>
@@ -32,17 +37,22 @@
 						<td width="25%"><s:property value="designation" /></td>
 						<td width="10%"><s:property value="quantitestock" /></td>
 						<td width="10%"><s:property value="prixUnitaire" /></td>
-	
-						<td width="10%"><s:property value="supprimer" />
-							<s:a action="supprimerArticle">
+
+						<td width="10%"><s:property value="supprimer" /> <s:a
+								action="supprimerArticle">
 								<img alt="supprimer" src="./images/Garbage-Open-48.png"
 									width="30px">
 								<s:param name="idArticle">
 									<s:property value="id" />
 								</s:param>
 							</s:a></td>
-						<td width="10%"><s:property value="modifier" />
-							<!--<s:a action="modifierClient"><img alt="modifier" src="./images/Data-Edit-48.png" width="30px"><s:param name="idClient">id</s:param></s:a>--></td>
+						<td width="6%"><s:property value="modifier" /> <s:a
+								action="modifierArticleLink">
+								<img alt="modifier" src="./images/Data-Edit-48.png" width="30px">
+								<s:param name="idArticle">
+									<s:property value="id" />
+								</s:param>
+							</s:a></td>
 					</tr>
 				</s:iterator>
 			</table>

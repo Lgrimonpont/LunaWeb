@@ -6,16 +6,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="<s:url value='/css/Body.css' />">
+<meta name="viewport" content="width=device-width" />
 </head>
 <body>
-
 	<div class="vertical-menu">
-		<s:a action="ajouterClientLink">Ajouter</s:a>
-		<s:a action="chercherClientLink">Rechercher</s:a>
-		<s:a action="accueilLink">Accueil</s:a>
+		<s:a action="ajouterClientLink" class="a1">Ajouter</s:a>
+		<s:a action="chercherClient" class="a1">Rechercher</s:a>
+		<s:a action="afficheClient" class="a1">Retour</s:a>
 	</div>
-
 	<div class="bodyJsp">
+		<s:form action="chercherClient">
+			<s:textfield label="Nom" name="nom" />
+			<s:textfield label="Prénom" name="prenom" />
+			<s:submit value="Rechercher" name="submit" />
+		</s:form>
 		<s:if test="getListClient()!=null">
 			<table>
 				<tr>
@@ -68,9 +72,5 @@
 			</table>
 		</s:if>
 	</div>
-
-	<a href="<s:url action="accueilLink"/>">Retour</a>
-	<br>
-
 </body>
 </html>

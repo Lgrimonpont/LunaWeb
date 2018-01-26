@@ -21,14 +21,14 @@ public class CommandeCreerDaoImp implements CommandeCreerDao {
 	@Override
 	public List<CommandeCreer> getAllCommandeCreer() {
 		@SuppressWarnings("unchecked")
-		TypedQuery<CommandeCreer> query = (TypedQuery<CommandeCreer>) (sessionFactory.getCurrentSession()).createQuery("from Commandecreer");
+		TypedQuery<CommandeCreer> query = (TypedQuery<CommandeCreer>) (sessionFactory.getCurrentSession()).createQuery("from CommandeCreer");
 		return query.getResultList();
 	}
 	
 	@Override
 	public CommandeCreer getCommandeCreer(long commandeCreerID) {
 		@SuppressWarnings("unchecked")
-		TypedQuery<CommandeCreer> query = (TypedQuery<CommandeCreer>) (sessionFactory.getCurrentSession()).createQuery("from Commandecreer where id ="+commandeCreerID);
+		TypedQuery<CommandeCreer> query = (TypedQuery<CommandeCreer>) (sessionFactory.getCurrentSession()).createQuery("from CommandeCreer where id ="+commandeCreerID);
 		return query.getResultList().get(0);
 	}
 	
@@ -40,7 +40,7 @@ public class CommandeCreerDaoImp implements CommandeCreerDao {
 	@Override
 	public void removeCommandeCreer(long commandeCreerID) {
 		@SuppressWarnings("unchecked")
-		TypedQuery<CommandeCreer> query = (TypedQuery<CommandeCreer>) (sessionFactory.getCurrentSession()).createQuery("delete from Commandecreer where id ="+commandeCreerID);
+		TypedQuery<CommandeCreer> query = (TypedQuery<CommandeCreer>) (sessionFactory.getCurrentSession()).createQuery("delete from CommandeCreer where id ="+commandeCreerID);
 		query.executeUpdate();
 	}
 	
@@ -48,7 +48,7 @@ public class CommandeCreerDaoImp implements CommandeCreerDao {
 	public void updateCommandeCreer(CommandeCreer commandeCreer) {
 		@SuppressWarnings("unchecked")
 		TypedQuery<CommandeCreer> query = (TypedQuery<CommandeCreer>) (sessionFactory.getCurrentSession())
-				.createQuery("UPDATE CommandCreer SET idcommande='"+commandeCreer.getIdcommande()+"',idArticle='"+commandeCreer.getIdArticle()+"',quantite='"+commandeCreer.getQuantite()+"' WHERE id='"+commandeCreer.getId()+"'");
+				.createQuery("UPDATE CommandeCreer SET idcommande='"+commandeCreer.getIdcommande()+"',idArticle='"+commandeCreer.getIdArticle()+"',quantite='"+commandeCreer.getQuantite()+"' WHERE id='"+commandeCreer.getId()+"'");
 		query.executeUpdate();
 	}
 	}

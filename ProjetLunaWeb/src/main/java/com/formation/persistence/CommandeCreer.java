@@ -13,19 +13,19 @@ public class CommandeCreer {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private long id;
 	
 	@Column
-	private int idcommande;
+	private long idcommande;
 	
 	@Column
-	private int idArticle;
+	private long idArticle;
 	
 	@Column
 	private int quantite;
 
 	
-	public CommandeCreer(int idcommande, int idArticle, int quantite) {
+	public CommandeCreer(long idcommande, long idArticle, int quantite) {
 		this.idcommande = idcommande;
 		this.idArticle = idArticle;
 		this.quantite = quantite;
@@ -36,28 +36,28 @@ public class CommandeCreer {
 	}
 
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
 	
-	public int getIdcommande() {
+	public long getIdcommande() {
 		return idcommande;
 	}
 
-	public void setIdcommande(int idcommande) {
+	public void setIdcommande(long idcommande) {
 		this.idcommande = idcommande;
 	}
 
-	public int getIdArticle() {
+	public long getIdArticle() {
 		return idArticle;
 	}
 
-	public void setIdArticle(int idArticle) {
+	public void setIdArticle(long idArticle) {
 		this.idArticle = idArticle;
 	}
 

@@ -21,10 +21,10 @@
 
 .vertical-menu {
 	background-color: #eee; /* Grey background color */
-	min-height: 250px;
-	position: fixed;
-	width: 10%;
-	height: auto;
+	min-height: 125px;
+	position:absolute;
+	width: 100px;
+	height: 10%;
 }
 
 .vertical-menu a {
@@ -33,10 +33,15 @@
 	display: block; /* Make the links appear below each other */
 	padding: 12px; /* Add some padding */
 	text-decoration: none; /* Remove underline from links */
+	font-size:11pt;
 }
 
 .vertical-menu a:hover {
 	background-color: #ccc; /* Dark grey background on mouse-over */
+	font-size:13pt;
+	padding-left:8px;
+	padding-right:0px;
+	width:105px;
 }
 
 .vertical-menu a.active {
@@ -54,3 +59,17 @@ li {
 	display: inline;
 }
 
+p {
+	font-size:14pt;
+	text-align: justify;
+}
+
+body {
+	margin:2px;
+}
+
+.a1 {
+	border-top: 1px solid;
+	border-bottom:solid;
+	border-right:solid;
+}

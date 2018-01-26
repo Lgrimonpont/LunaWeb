@@ -1,10 +1,10 @@
 @CHARSET "ISO-8859-1";
 
-.footer{
-	position: fixed;
-    text-align: center;
-    vertical-align:middle;
-    bottom: 0;
-    margin-bottom: 0;
+.footer {
+	position: absolute;
+	text-align: center;
+	vertical-align:middle;
+	bottom: 0;
+	margin-bottom: 0;
 }
 

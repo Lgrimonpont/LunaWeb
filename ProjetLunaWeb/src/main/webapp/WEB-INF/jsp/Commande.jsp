@@ -6,9 +6,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="<s:url value='/css/Body.css' />">
+<meta name="viewport" content="width=device-width"/>
 </head>
 <body>
-	<h1>Page Commande</h1>
+
+	<div class="vertical-menu">
+		<s:a action="ajouterCommandeLink" class="a1">Ajouter</s:a>
+		<s:a action="chercherCommandeLink" class="a1">Rechercher</s:a>
+		<s:a action="accueilLink" class="a1">Accueil</s:a>
+	</div>
+
 	<div class="bodyJsp">
 		<s:if test="getListCommande()!=null">
 			<table>
@@ -28,24 +35,26 @@
 						<td width="30%"><s:property value="libelle" /></td>
 						<td width="10%"><s:property value="idclient" /></td>
 						<td width="30%"><s:property value="datecommande" /></td>
-						<td width="10%"><s:property value="supprimer" />
-							<s:a action="supprimerCommande">
+						<td width="10%"><s:property value="supprimer" /> <s:a
+								action="supprimerCommande">
 								<img alt="supprimer" src="./images/Garbage-Open-48.png"
 									width="30px">
 								<s:param name="idCommande">
 									<s:property value="id" />
 								</s:param>
 							</s:a></td>
-						<td width="10%"><s:property value="modifier" />
-							<!--<s:a action="modifierClient"><img alt="modifier" src="./images/Data-Edit-48.png" width="30px"><s:param name="idClient">id</s:param></s:a>--></td>
+						<td width="10%"><s:property value="modifier" /> <s:a
+								action="modifierCommandeLink">
+								<img alt="modifier" src="./images/Data-Edit-48.png" width="30px">
+								<s:param name="idCommande">
+									<s:property value="id" />
+								</s:param>
+							</s:a></td>
 					</tr>
 				</s:iterator>
 			</table>
 		</s:if>
 	</div>
-
-	<a href="<s:url action="accueilLink"/>">Retour</a>
-	<br>
 
 </body>
 </html>

@@ -1,9 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/Body.css" type="text/css">
+
 <html>
 <head>
+<link rel="stylesheet" href="<s:url value='/css/Body.css' />">
 </head>
 <body>
 	<div class="bodyJsp">

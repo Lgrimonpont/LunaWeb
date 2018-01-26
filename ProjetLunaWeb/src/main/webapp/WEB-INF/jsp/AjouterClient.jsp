@@ -6,12 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="<s:url value='/css/Body.css' />">
+<meta name="viewport" content="width=device-width" />
 </head>
 <body>
 	<div class="vertical-menu">
-		<s:a action="ajouterClientLink">Ajouter</s:a>
-		<s:a action="chercherClientLink">Rechercher</s:a>
-		<s:a action="afficheClient">Retour</s:a>
+		<s:a action="ajouterClientLink" class="a1">Ajouter</s:a>
+		<s:a action="chercherClientLink" class="a1">Rechercher</s:a>
+		<s:a action="afficheClient" class="a1">Retour</s:a>
 	</div>
 	<div class="bodyJsp">
 		<s:if test="getAjouter_modifier()==true">
@@ -31,7 +32,7 @@
 		</s:if>
 		<s:if test="getAjouter_modifier()==false">
 			<s:form action="modifierClient">
-				<s:textfield label="id" name="client.id" />
+				<s:hidden label="id" name="client.id" />
 				<s:textfield label="Crée Le" name="client.dateCreation" />
 				<s:textfield label="Carte de fidélité" name="client.carteFidelite" />
 				<s:textfield label="Prénom" name="client.prenom" />
