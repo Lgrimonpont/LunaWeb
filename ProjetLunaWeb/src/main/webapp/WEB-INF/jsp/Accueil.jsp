@@ -17,9 +17,9 @@
 		<h2>Bienvenue sur l'application LunaWeb !</h2>
 		<br>
 		<br>
-		<p>Cette application JAVA a été réalisée par Lucien GRIMONPONT et Antoine LIÉVIN dans le cadre du projet final de la formation JAVA/EE chez Actif Solution. </p>
+		<p>Cette application JAVA a Ã©tÃ© rÃ©alisÃ©e par Lucien GRIMONPONT et Antoine LIÃ‰VIN dans le cadre du projet final de la formation JAVA/EE chez Actif Solution. </p>
 		<br>
-		<p>Sur cette application, vous pouvez consulter les pages « Client », « Article » et « Commande » sur lesquelles vous pourrez consulter les données déjà disponibles mais aussi ajouter, modifier ou supprimer des données.</p>
+		<p>Sur cette application, vous pouvez consulter les pages Â« Client Â», Â« Article Â», Â« Commande Â» et Â« CommandeCreer Â» sur lesquelles vous pourrez consulter les donnÃ©es dÃ©jÃ  disponibles mais aussi ajouter, modifier ou supprimer des donnÃ©es.</p>
 		<br>
 
 	</div>
